@@ -1,0 +1,56 @@
+:root {
+    --color-dark-variant: #222425;
+    --border-before-color: rgba(17, 16, 16, 0.39);
+
+}
+
+.dark-theme-variables {
+    --color-dark-variant: #ffffff;
+    --border-before-color: rgba(254, 251, 251, 0.39);
+
+}
+
+.button-container {
+    display: flex;
+    gap: 2%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.button-model {
+    position: relative;
+    background-color: rgba(20, 167, 62, 1);
+    border-radius: 5px;
+    box-shadow: rgb(5, 54, 19) 0px 4px 0px 0px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    align-items: center;
+    width: 154px;
+    height: 49px;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    color: var(--color-dark-variant);
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.button::before {
+    content: "";
+    background-color: rgb(115, 230, 148);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+}
+
+.button:hover::before {
+    width: 100%;
+}
