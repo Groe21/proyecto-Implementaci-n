@@ -7,7 +7,6 @@ if (!isset($_SESSION['id']) || empty($_SESSION['nombre']) || empty($_SESSION['ro
 
 include_once '../model/roles_menu.php';
 
-
 ?>
 
 <style>
@@ -38,7 +37,7 @@ include_once '../model/roles_menu.php';
 
         <div class="sidebar">
             <?php if (isOptionAllowed('dashboard', $_SESSION['rol'])) { ?>
-                <a href="dashboard.php" class="default-active">
+                <a href="principal.php" class="default-active">
                     <span class="las la-home"></span>
                     <h3>Inicio</h3>
                 </a>
@@ -52,8 +51,8 @@ include_once '../model/roles_menu.php';
                     <h3>Matricula</h3>
                 </a>
             <?php } ?>
-            <?php if (isOptionAllowed('responsables', $_SESSION['rol'])) { ?>
 
+            <?php if (isOptionAllowed('responsables', $_SESSION['rol'])) { ?>
                 <a href="tabresponsable.php">
                     <span class="material-symbols-outlined">
                         supervised_user_circle
@@ -61,6 +60,7 @@ include_once '../model/roles_menu.php';
                     <h3>Responsables</h3>
                 </a>
             <?php } ?>
+
             <?php if (isOptionAllowed('matriculados', $_SESSION['rol'])) { ?>
 
                 <a href="estudiantes.php">
@@ -70,7 +70,6 @@ include_once '../model/roles_menu.php';
                     <h3>Matriculados</h3>
                 </a>
             <?php } ?>
-
 
             <?php if (isOptionAllowed('listado', $_SESSION['rol'])) { ?>
 
@@ -93,7 +92,6 @@ include_once '../model/roles_menu.php';
             <?php } ?>
 
             <?php if (isOptionAllowed('inactivos', $_SESSION['rol'])) { ?>
-
                 <a href="inactivos.php">
                     <span class="material-symbols-outlined">
                     no_accounts
@@ -101,8 +99,7 @@ include_once '../model/roles_menu.php';
                     <h3>Estudiantes Inactivos</h3>
                 </a>
             <?php } ?>
-
-
+            
             <?php if (isOptionAllowed('opciones', $_SESSION['rol'])) { ?>
                 <a href="../administracion/tab_opciones.php">
                     <span class="material-symbols-outlined">
@@ -111,8 +108,6 @@ include_once '../model/roles_menu.php';
                     <h3>Opciones</h3>
                 </a>
             <?php } ?>
-
-            
-
         </div>
     </aside>
+</div>

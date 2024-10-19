@@ -29,7 +29,7 @@ if (!empty($_POST["btningresar"])) {
                         header("Location: ../web2/administrativo.php");
                     } else {
                         // Redirigir a la página principal del dashboard
-                        header("Location: dashboard.php");
+                        header("Location: principal.php");
                     }
                     exit(); // Salir del script después de redireccionar
                 } else {

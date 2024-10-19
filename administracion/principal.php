@@ -1,10 +1,20 @@
+<?php
+include_once '../model/conexion.php'; 
+session_start();
+if (!isset($_SESSION['id']) || empty($_SESSION['nombre']) || empty($_SESSION['rol'])) {
+    header("location: login.php");
+    exit();
+}
+$conn = conectarBaseDeDatos();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Administrativo</title>
+    <title>Panel Principal</title>
     <link rel="icon" href="../img/logo23.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
@@ -17,12 +27,11 @@
 </head>
 <body>
     <header>
-    <?php include_once "cabecera.php"; ?>
+        
     </header>
  
     <main>
-        <?php include_once "menu_lateral.php"; ?>
-        
+        <?php include_once "../layout/menu_lateral.php"; ?>
     </main>
 
     <footer>
@@ -39,5 +48,6 @@
     <script src="../src/datatables/Responsive-2.4.1/js/dataTables.responsive.min.js"></script>
     <script src="../js/menu.js"></script>
     <script src="../js/tema.js"></script>
+    
 </body>
 </html>
