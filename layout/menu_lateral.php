@@ -37,7 +37,7 @@ include_once '../model/roles_menu.php';
 
         <div class="sidebar">
             <?php if (isOptionAllowed('dashboard', $_SESSION['rol'])) { ?>
-                <a href="principal.php" class="default-active">
+                <a href="dashboard.php" class="default-active">
                     <span class="las la-home"></span>
                     <h3>Inicio</h3>
                 </a>
