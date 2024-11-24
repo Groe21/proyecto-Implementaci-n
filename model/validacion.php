@@ -24,8 +24,9 @@ if (!empty($_POST["btningresar"])) {
                     $_SESSION["nombre"] = $result['usuario'];
                     $_SESSION["rol"] = $result['rol'];
 
+                    // Redirigir al diseñador a la página correcta
                     if ($result['rol'] == 'disenador') {
-                        // Redirigir al diseñador a una página específica
+                        // Redirigir al diseñador a web2/administrativo.php
                         header("Location: ../web2/administrativo.php");
                     } else {
                         // Redirigir a la página principal del dashboard
@@ -60,3 +61,4 @@ function mostrarAlerta($title, $text)
         });
     </script>';
 }
+?>
