@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
         <link rel="stylesheet" href="../css/bott.css"  />
+        <link rel="stylesheet" href="../css/estilo.css"  />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -30,6 +31,7 @@
                     
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="../model/cerrar_session.php">Salir</a></li>
+                        
                     </ul>
                 </li>
             </ul>
@@ -95,6 +97,7 @@
         <script src="../js/bott.js"></script>
         <script src="../assets/demo/chart-area-demo.js"></script>
         <script src="../assets/demo/chart-bar-demo.js"></script>
+        <script src="../assets/demo/chart-osc-demo.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
         <script src="../js/datatables-simple-demo.js"></script>

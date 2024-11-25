@@ -1,53 +1,33 @@
 <?php
-session_start();
-include_once "conexion.php";
+include_once("../model/validacion.php");
+include_once('../model/conexion.php');
 
-if (!empty($_POST["btningresar"])) {
-    if (!empty($_POST["usuario"]) && !empty($_POST["contrasena"])) {
-        $usuario = $_POST["usuario"];
-        $contrasena = $_POST["contrasena"];
+// Aquí puedes añadir la lógica para validar el inicio de sesión.
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $usuario = $_POST['usuario'] ?? '';
+    $contrasena = $_POST['contrasena'] ?? '';
 
-        try {
-            $conexion = conectarBaseDeDatos();
+    // Validación básica de campos no vacíos
+    if (!empty($usuario) && !empty($contrasena)) {
+    
 
-            $sql = "SELECT id, usuario, rol, estado FROM usuarios WHERE usuario = :usuario AND contrasena = :contrasena";
-            $stmt = $conexion->prepare($sql);
-            $stmt->bindParam(':usuario', $usuario);
-            $stmt->bindParam(':contrasena', $contrasena);
-            $stmt->execute();
+        // Lógica de validación con base de datos
+        $query = $conexion->prepare("SELECT * FROM usuarios WHERE usuario = :usuario AND contrasena = :contrasena");
+        $query->bindParam(':usuario', $usuario);
+        $query->bindParam(':contrasena', $contrasena);
+        $query->execute();
 
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            if ($result) {
-                if ($result['estado'] == true) {
-                    $_SESSION["id"] = $result['id'];
-                    $_SESSION["nombre"] = $result['usuario'];
-                    $_SESSION["rol"] = $result['rol'];
-
-                    // Redirigir al diseñador a la página correcta
-                    if ($result['rol'] == 'disenador') {
-                        // Redirigir al diseñador a web2/administrativo.php
-                        header("Location: ../web2/administrativo.php");
-                    } else {
-                        // Redirigir a la página principal del dashboard
-                        header("Location: dashboard.php");
-                    }
-                    exit(); // Salir del script después de redireccionar
-                } else {
-                    mostrarAlerta("Acceso no permitido", "El acceso no está permitido en este momento.");
-                }
-            } else {
-                mostrarAlerta("Error", "Usuario o contraseña incorrectos!");
-            }
-
-            $stmt->closeCursor(); // Cerrar el cursor antes de cerrar la conexión
-            $conexion = null; // Cerrar la conexión
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
+        if ($query->rowCount() > 0) {
+            // Inicio de sesión exitoso
+            header("Location: ../web2/administrativo.php");
+            exit;
+        } else {
+            echo "<div class='alert alert-danger text-center'>Usuario o contraseña incorrectos.</div>";
         }
+    } else {
+        echo "<div class='alert alert-warning text-center'>Por favor, completa todos los campos.</div>";
     }
 }
-
 function mostrarAlerta($title, $text)
 {
     echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
@@ -61,4 +41,3 @@ function mostrarAlerta($title, $text)
         });
     </script>';
 }
-?>
