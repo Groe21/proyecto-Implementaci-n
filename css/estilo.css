@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.table-responsive {
+    margin-top: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table thead {
+    background-color: #dc3545;
+    color: white;
+}
+
+table th, table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+.img-thumbnail {
+    width: 150px;  /* Establece un ancho fijo */
+    height: 100px; /* Establece una altura fija */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin perder proporción (recortando si es necesario) */
+    border: 1px solid #dee2e6; /* Borde para la imagen */
+    padding: 2px; /* Espaciado interno */
+}
+
+/* Centrar los botones en las celdas */
+#datos_padres td {
+    text-align: center;
+}
+/* Estilo para los botones editar y borrar */
+.btn {
+    width: 100%;           /* El botón se adapta al 100% del ancho de la celda */
+    max-width: 150px;      /* Establece un ancho máximo para evitar que el botón se haga demasiado grande */
+    padding: 5px 10px;     /* Ajuste para botones más pequeños */
+    text-align: center;    /* Centrar el texto e icono dentro del botón */
+    display: flex;         /* Usar flexbox para centrar el contenido del botón */
+    justify-content: center;
+    align-items: center;
+}
