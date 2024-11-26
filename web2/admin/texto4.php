@@ -89,18 +89,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 /* Estilo para los botones */
 .formulario-destacado input[type="submit"] {
-    width: 100%; /* Hace que el botón se extienda a lo ancho del formulario */
-    padding: 1em; /* Aumenta el padding para un botón más grande */
-    background-color: #007bff; /* Color más claro que el anterior */
-    color: #ffffff;
-    border: none;
-    border-radius: 30px; /* Bordes más redondeados */
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block; /* Asegura que el botón ocupe una línea completa */
+    width: auto; /* Ajusta el tamaño del botón según su contenido */
+    padding: 1em 2em; /* Aumenta el tamaño del botón, asegurando un buen padding */
+    background-color: #007bff; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1em; /* Tamaño de fuente */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave para el botón */
-    margin-top: 1em; /* Asegura un espacio por encima del botón si es necesario */
+    margin-top: 1em; /* Espacio superior */
+    margin-left: auto; /* Alinea el botón a la derecha */
+    margin-right: 0; /* Asegura que el botón se quede en la parte derecha */
+    text-align: center; /* Centra el texto dentro del botón */
 }
+
 
 .formulario-destacado input[type="submit"]:hover {
     background-color: #0069d9; /* Color ligeramente más oscuro para el hover */

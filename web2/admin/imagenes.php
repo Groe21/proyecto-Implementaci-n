@@ -109,22 +109,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 margin-bottom: 20px; /* Separación entre la vista previa y los botones */
             }
 
-            /* Estilos del botón Guardar */
-            .guardar-archivo {
-                background-color: #3498db;
-                color: white;
-                border: none;
-                padding: 20px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 5px;
-                transition: background-color 0.3s;
-                width: 200px; /* Hacer que los botones ocupen todo el ancho del div */
-                margin-bottom: 20px; /* Separación entre botones */
-            }
+/* Estilos del botón Guardar */
+.guardar-archivo {
+    display: block; /* Asegura que el botón ocupe una línea completa */
+    width: auto; /* El botón se ajusta al contenido */
+    padding: 20px 30px; /* Ajusta el tamaño del botón */
+    background-color: #3498db; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Efecto de transición */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 20px auto 0; /* Centra el botón horizontalmente y agrega espacio superior */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
 
             .guardar-archivo:hover {
                 background-color: #2980b9;

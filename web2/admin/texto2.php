@@ -97,21 +97,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     min-height: 120px;
     resize: vertical;
 }
-
 /* Estilo para los botones */
 .formulario-destacado input[type="submit"] {
-    width: 100%; /* Hace que el botón se extienda a lo ancho del formulario */
-    padding: 1em; /* Aumenta el padding para un botón más grande */
-    background-color: #007bff; /* Color más claro que el anterior */
-    color: #ffffff;
-    border: none;
-    border-radius: 30px; /* Bordes más redondeados */
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave para el botón */
-    margin-top: 1em; /* Asegura un espacio por encima del botón si es necesario */
+    display: block; /* Asegura que el botón ocupe una línea completa */
+    width: auto; /* Permite ajustar el ancho del botón según su contenido */
+    padding: 0.8em 2em; /* Tamaño del botón ajustado: alto y espacio lateral */
+    background-color: #007bff; /* Color del fondo */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor cambia al pasar sobre el botón */
+    font-size: 1em; /* Tamaño de fuente */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición para hover */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-top: 1em; /* Espacio superior */
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+    margin-right: 0; /* Completa la alineación a la derecha */
+    text-align: center; /* Centra el texto dentro del botón */
 }
+
 
 .formulario-destacado input[type="submit"]:hover {
     background-color: #0069d9; /* Color ligeramente más oscuro para el hover */
