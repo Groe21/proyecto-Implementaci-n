@@ -2,6 +2,20 @@
 include_once("../model/validacion.php");
 include_once('../model/conexion.php');
 
+function mostrarAlerta($title, $text, $icon)
+{
+    echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+    echo '<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            Swal.fire({
+                icon: "' . $icon . '",
+                title: "' . $title . '",
+                text: "' . $text . '",
+            });
+        });
+    </script>';
+}
+
 // Aquí puedes añadir la lógica para validar el inicio de sesión.
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST['usuario'] ?? '';
@@ -9,8 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validación básica de campos no vacíos
     if (!empty($usuario) && !empty($contrasena)) {
-    
-
         // Lógica de validación con base de datos
         $query = $conexion->prepare("SELECT * FROM usuarios WHERE usuario = :usuario AND contrasena = :contrasena");
         $query->bindParam(':usuario', $usuario);
@@ -22,22 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: ../web2/administrativo.php");
             exit;
         } else {
-            echo "<div class='alert alert-danger text-center'>Usuario o contraseña incorrectos.</div>";
+            mostrarAlerta('Error', 'Usuario o contraseña incorrectos.', 'error');
         }
     } else {
-        echo "<div class='alert alert-warning text-center'>Por favor, completa todos los campos.</div>";
+        mostrarAlerta('Advertencia', 'Por favor, completa todos los campos.', 'warning');
     }
 }
-function mostrarAlerta($title, $text)
-{
-    echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
-    echo '<script>
-        document.addEventListener("DOMContentLoaded", function() {
-            Swal.fire({
-                icon: "error",
-                title: "' . $title . '",
-                text: "' . $text . '",
-            });
-        });
-    </script>';
-}
+?>

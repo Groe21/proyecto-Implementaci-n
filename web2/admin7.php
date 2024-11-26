@@ -21,15 +21,14 @@
             Las Aguilas del Saber
         </a>
             <!-- Sidebar Toggle-->
-
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="../model/cerrar_session.php">Salir</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="../model/cerrar_session.php">Salir</a></li>
                     </ul>
                 </li>
             </ul>
@@ -91,7 +90,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         
         <script src="../js/datatables-simple-demo.js"></script>
-        <script src="../assets/demo/chart-osc-demo.js"></script>
 
     
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
