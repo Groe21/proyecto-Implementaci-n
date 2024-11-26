@@ -61,7 +61,6 @@
                                     <a class="nav-link" href="admin5.php">Comunicados</a>
                                     <a class="nav-link" href="admin6.php">Profesores</a>
                                     <a class="nav-link" href="admin7.php">Galeria</a>
-                                    <a class="nav-link" href="#">Login</a>
                                     <a class="nav-link" href="#">Inscripciones</a>
                                     
                                     
