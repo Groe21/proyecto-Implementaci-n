@@ -74,6 +74,7 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Inscripciones </h1>
                         
+                        <?php include_once('../admin/mostrar_estudiante.php');?>
 
                     </div>
                 </main>
