@@ -15,76 +15,107 @@ include_once '../model/conexion.php';
 <title>Inscripción</title>
 </head>
 <style>
+    /* Contenedor principal de la tarjeta */
     .card {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px;
+        border: 1px solid #ccc; /* Borde sutil */
+        border-radius: 15px; /* Bordes redondeados */
+        background-color: #fff; /* Fondo blanco limpio */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para elegancia */
+        max-width: 400px; /* Tamaño controlado */
+        margin: 0 auto; /* Centrado horizontal */
     }
 
-
+    /* Contenedor del logo */
     .logo-container {
-        margin-right: 20px;
-        /* Espacio entre el logo y la información de la escuela */
-
-        text-align: flex;
+        margin-bottom: 15px; /* Espaciado entre el logo y la información */
+        text-align: center;
     }
 
     .logo {
-        width: 150px;
+        width: 150px; /* Tamaño original */
         height: 150px;
-        text-align: center;
     }
 
-
+    /* Contenedor de información de la escuela */
     .school-container {
         text-align: center;
-        margin-top: 10px;
-        /* Ajusta el margen superior según tus preferencias */
+        margin-top: 10px; /* Espaciado superior */
     }
 
     .school-info {
-        background-color: #ff0000;
-        padding: 10px;
-        /* Aumentamos el padding para mejorar la legibilidad */
-        border-radius: 10px;
-        margin-top: 10px;
+        background-color: #ff0000; /* Conserva el color rojo */
+        padding: 15px; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+        margin-top: 15px; /* Separación superior */
+        color: black; /* Texto blanco */
     }
 
     .school-info h2 {
-        color: black;
-        /* Cambiamos el color del texto a negro */
-        margin-bottom: 0;
-        /* Ajustamos el margen inferior para reducir el espacio debajo del texto */
+        color: white; /* Asegura contraste del texto con el fondo */
+        font-size: 22px;
+        margin-bottom: 5px; /* Controla el espaciado */
     }
 
-    h2 {
-        font-size: 24px;
+    .school-info h3 {
+        font-size: 18px;
         margin-bottom: 5px;
-    }
-
-    h3 {
-        font-size: 24px;
-        margin-bottom: 5px;
+        color: white;
     }
 
     .small-text {
-        font-size: 12px;
-        margin-bottom: 2px;
+        font-size: 14px; /* Ajuste más formal y legible */
+        margin-top: 5px;
+        color: white;
     }
 
+    /* Contenedor del botón */
+    .button-container {
+        display: flex;
+        justify-content: flex-end; /* Botón alineado a la derecha */
+        width: 100%; /* Ocupa todo el ancho */
+        margin-top: 20px; /* Espaciado superior */
+    }
+
+    .styled-button {
+        background-color: #000; /* Botón negro elegante */
+        color: white; /* Texto blanco */
+        font-size: 14px; /* Tamaño adecuado y formal */
+        padding: 10px 20px; /* Espaciado interno balanceado */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes ligeramente redondeados */
+        cursor: pointer; /* Cursor interactivo */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    }
+
+    .styled-button:hover {
+        background-color: #333; /* Negro más oscuro en hover */
+        transform: scale(1.05); /* Efecto de leve agrandamiento */
+    }
+
+    /* Ajustes para dispositivos móviles */
     @media (max-width: 767px) {
-        .logo-container {
-            margin-right: 0;
-            /* Eliminamos el margen a la derecha en dispositivos móviles */
+        .card {
+            padding: 15px; /* Espaciado reducido */
+        }
+
+        .logo {
+            width: 120px; /* Ajuste de tamaño del logo */
         }
 
         .school-info {
-            padding: 0;
-            /* Aumentamos el padding en dispositivos móviles para una mejor legibilidad */
+            padding: 10px; /* Espaciado interno menor */
+        }
+
+        .styled-button {
+            font-size: 13px; /* Fuente más pequeña */
+            padding: 8px 16px; /* Espaciado reducido */
         }
     }
 </style>
-
 <body>
     <main class="container mt-5">
         <form action="#" method="post" id="formularioInscripcion">
