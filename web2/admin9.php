@@ -39,7 +39,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                         
-                            <a class="nav-link" href="admin9.php">
+                            <a class="nav-link" href="administrativo.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Panel Administrativo
                             </a>
@@ -74,7 +74,6 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Inscripciones </h1>
                         
-                        <?php include_once("./admin/php");?>
 
                     </div>
                 </main>
