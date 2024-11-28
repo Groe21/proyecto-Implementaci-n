@@ -74,7 +74,7 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Inscripciones </h1>
                         
-                        <?php include_once("./admin/pre_incripcion.php");?>
+                        <?php include_once("./admin/php");?>
 
                     </div>
                 </main>

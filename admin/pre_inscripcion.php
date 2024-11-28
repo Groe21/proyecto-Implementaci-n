@@ -24,8 +24,8 @@ include_once '../model/conexion.php';
         border: 1px solid #ccc; /* Borde sutil */
         border-radius: 15px; /* Bordes redondeados */
         background-color: #fff; /* Fondo blanco limpio */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para elegancia */
-        max-width: 400px; /* Tamaño controlado */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        max-width: 400px; /* Controla el tamaño */
         margin: 0 auto; /* Centrado horizontal */
     }
 
@@ -47,75 +47,87 @@ include_once '../model/conexion.php';
     }
 
     .school-info {
-        background-color: #ff0000; /* Conserva el color rojo */
+        background-color: #ff0000; /* Fondo rojo */
         padding: 15px; /* Espaciado interno */
         border-radius: 10px; /* Bordes redondeados */
         margin-top: 15px; /* Separación superior */
-        color: black; /* Texto blanco */
+        color: white; /* Texto blanco predeterminado */
     }
 
+    /* Estilo para el nombre de la escuela */
     .school-info h2 {
-        color: white; /* Asegura contraste del texto con el fondo */
+        color: white; /* "Las Águilas del Saber" en blanco */
         font-size: 22px;
         margin-bottom: 5px; /* Controla el espaciado */
     }
 
+    /* Estilo para otros textos en la tarjeta */
     .school-info h3 {
         font-size: 18px;
         margin-bottom: 5px;
-        color: white;
+        color: white; /* Texto en blanco */
     }
 
-    .small-text {
-        font-size: 14px; /* Ajuste más formal y legible */
+    /* Texto adicional como resolución y ubicación */
+    .school-info .dark-text {
+        font-size: 14px;
+        color: black; /* Texto oscuro para contraste */
         margin-top: 5px;
-        color: white;
     }
 
-    /* Contenedor del botón */
+    /* Texto pequeño (AMIE, Resolución) */
+    .school-info .small-text {
+        font-size: 12px;
+        color: black; /* Texto oscuro */
+        margin-top: 5px;
+    }
+
+    /* Botón alineado a la derecha */
     .button-container {
         display: flex;
-        justify-content: flex-end; /* Botón alineado a la derecha */
+        justify-content: flex-end; /* Botón a la derecha */
         width: 100%; /* Ocupa todo el ancho */
         margin-top: 20px; /* Espaciado superior */
     }
 
     .styled-button {
-        background-color: #000; /* Botón negro elegante */
+        background-color: #000; /* Botón negro */
         color: white; /* Texto blanco */
-        font-size: 14px; /* Tamaño adecuado y formal */
-        padding: 10px 20px; /* Espaciado interno balanceado */
-        border: none; /* Sin borde */
-        border-radius: 5px; /* Bordes ligeramente redondeados */
-        cursor: pointer; /* Cursor interactivo */
-        transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+        font-size: 14px; /* Tamaño adecuado */
+        padding: 10px 20px; /* Espaciado interno */
+        border: none; /* Sin bordes */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Indicador interactivo */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Efectos suaves */
     }
 
     .styled-button:hover {
-        background-color: #333; /* Negro más oscuro en hover */
-        transform: scale(1.05); /* Efecto de leve agrandamiento */
+        background-color: #333; /* Negro más oscuro al pasar el ratón */
+        transform: scale(1.05); /* Efecto de agrandamiento */
     }
 
-    /* Ajustes para dispositivos móviles */
+    /* Ajustes responsivos */
     @media (max-width: 767px) {
         .card {
-            padding: 15px; /* Espaciado reducido */
+            padding: 15px; /* Ajuste de espaciado */
         }
 
         .logo {
-            width: 120px; /* Ajuste de tamaño del logo */
+            width: 120px; /* Reducción de tamaño del logo */
         }
 
         .school-info {
-            padding: 10px; /* Espaciado interno menor */
+            padding: 10px; /* Espaciado interno reducido */
         }
 
         .styled-button {
             font-size: 13px; /* Fuente más pequeña */
-            padding: 8px 16px; /* Espaciado reducido */
+            padding: 8px 16px; /* Espaciado ajustado */
         }
     }
 </style>
+
+
 <body>
     <main class="container mt-5">
         <form action="#" method="post" id="formularioInscripcion">
