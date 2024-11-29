@@ -48,8 +48,8 @@ $conn = null;
                 <th>Nombres</th>
                 <th>Dirección</th>
                 <th>Condición</th>
-                <th>Discapacidad</th>
-                <th>Porcentaje de Discapacidad</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
             </tr>
         </thead>
         <tbody>
