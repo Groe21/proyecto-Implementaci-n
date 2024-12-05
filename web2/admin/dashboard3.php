@@ -217,6 +217,7 @@
                     success: function(data){
                         alert(data);
                         dataTable.ajax.reload();
+                        
                     }
                 });
             } else{

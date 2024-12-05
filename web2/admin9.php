@@ -16,12 +16,11 @@
     <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-danger">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="admin2.php">
-        <img src="../img/logo23.png" alt="Logo" style="height: 50px; margin-right: 1px;">
-        Las Aguilas del Saber
-    </a>
+        <a class="navbar-brand ps-3" href="admin7.php">
+            <img src="../img/logo23.png" alt="Logo" style="height: 50px; margin-right: 1px;">
+            Las Aguilas del Saber
+        </a>
             <!-- Sidebar Toggle-->
-
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
@@ -73,9 +72,9 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Textos Historia del Plantel</h1>
+                        <h1 class="mt-4">Inscripciones </h1>
                         
-                        <?php include_once("./admin/texto2.php");?>
+                        <?php include_once('../admin/mostrar_estudiante.php');?>
 
                     </div>
                 </main>
@@ -85,16 +84,14 @@
     
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
     <script src="../js/bott.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         
-        <script src="../assets/demo/chart-area-demo.js"></script>
-        <script src="../assets/demo/chart-bar-demo.js"></script>
         <script src="../js/datatables-simple-demo.js"></script>
         <script src="../assets/demo/chart-osc-demo.js"></script>
 
     
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 include_once("../model/validacion.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,22 +66,10 @@ include_once("../model/validacion.php");
 
                 <input class="form-control bg-light" type="text" placeholder="Usuario" name="usuario" />
             </div>
-
+            
             <div class="input-group mt-3" style="height: 3rem;">
-                <div class="input-group-text bg-light">
-                    <span class="material-icons-sharp">lock</span>
-                </div>
-
-                <input class="password form-control bg-light" type="password" placeholder="Contraseña"
-                    name="contrasena">
-
-                <span class="  input-group-text">
-                    <button class="btn-show-pass" type="button" onclick="showPassword()">
-
-                        <i class="icon fas fa-eye-slash"></i>
-                    </button>
-            </div>
-
+    <input class="password form-control bg-light" type="password" placeholder="Contraseña" name="contrasena" />
+</div>
 
 
             <div class="d-flex justify-content-around mt-1">

@@ -25,7 +25,7 @@ $conn = conectarBaseDeDatos();
     <link rel="stylesheet" href="../src/datatables/Responsive-2.4.1/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
 </head>
-<body>
+<body id="page-top">
     <header>
         
     </header>

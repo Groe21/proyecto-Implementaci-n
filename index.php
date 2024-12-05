@@ -117,7 +117,7 @@
             <a href="./admin/pre_inscripcion.php " class="nav-item nav-link">Inscripcion</a>
 
         </div>
-        <a href="./administracion/login.php" class="btn btn-primary px-4">Iniciar Sesión</a>
+        <a href="./administracion\login.php" class="btn btn-primary px-4">Iniciar Sesión</a>
         </div>
     </nav>
     </div>

@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
         <link rel="stylesheet" href="../css/bott.css"  />
+        <link rel="stylesheet" href="../css/estilo.css"  />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -20,8 +21,6 @@
             Las Aguilas del Saber
         </a>
             <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-        
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
@@ -62,8 +61,7 @@
                                     <a class="nav-link" href="admin5.php">Comunicados</a>
                                     <a class="nav-link" href="admin6.php">Profesores</a>
                                     <a class="nav-link" href="admin7.php">Galeria</a>
-                                    <a class="nav-link" href="#">Login</a>
-                                    <a class="nav-link" href="#">Inscripciones</a>
+                                    <a class="nav-link" href="admin9.php">Inscripciones</a>
                                     
                                     
                                     
